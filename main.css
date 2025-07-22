@@ -1,0 +1,158 @@
+/* 全体のボディスタイル */
+body {
+    font-family: 'Inter', sans-serif; /* 読みやすいフォントを設定 */
+    line-height: 1.6; /* 行の高さを調整して読みやすくする */
+    margin: 0; /* デフォルトのマージンを削除 */
+    padding: 0; /* デフォルトのパディングを削除 */
+    background-color: #f8f8f8; /* 明るい背景色で視認性を確保 */
+    color: #333; /* 濃い文字色で背景とのコントラストを出す */
+    display: flex; /* Flexboxを使ってコンテンツを中央に配置 */
+    flex-direction: column; /* 縦方向に要素を並べる */
+    min-height: 100vh; /* 画面の高さいっぱいにする */
+    align-items: center; /* コンテンツを水平方向に中央揃え */
+}
+
+/* メインコンテンツの幅を制限し、中央に配置 */
+main {
+    max-width: 960px; /* PC表示での最大幅 */
+    width: 100%; /* 小さい画面では幅いっぱいに */
+    padding: 20px; /* 内側の余白 */
+    box-sizing: border-box; /* パディングを幅に含める */
+}
+
+/* ヘッダースタイル */
+header {
+    background-color: #0056b3; /* 高専のイメージに合わせた青系の色 */
+    color: #ffffff; /* 白い文字でコントラストを出す */
+    padding: 40px 20px; /* 上下のパディングを大きくしてゆとりを持たせる */
+    text-align: center; /* テキストを中央揃え */
+    border-bottom-left-radius: 15px; /* 下部の角を丸くする */
+    border-bottom-right-radius: 15px;
+    width: 100%; /* 幅いっぱいに広げる */
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-top: 0; /* 上部のマージンを削除 */
+    font-size: 2.5em; /* メインタイトルを大きく */
+}
+
+header p {
+    font-size: 1.2em; /* サブタイトルを少し大きく */
+}
+
+/* セクション（各コンテンツブロック）のスタイル */
+section {
+    background-color: #ffffff; /* 白い背景でコンテンツを際立たせる */
+    margin-bottom: 20px; /* 下部に余白 */
+    padding: 30px; /* 内側の余白 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ほんのり影をつけて立体感を出す */
+}
+
+section h2 {
+    color: #007bff; /* セクションタイトルに明るい青を使用 */
+    border-bottom: 2px solid #007bff; /* 下線で区切りを強調 */
+    padding-bottom: 10px; /* 下線とテキストの間に余白 */
+    margin-top: 0; /* 上部のマージンを削除 */
+    font-size: 2em; /* セクションタイトルを大きく */
+}
+
+/* 画像スタイル */
+.responsive-img {
+    max-width: 100%; /* 画像が親要素の幅を超えないようにする */
+    height: auto; /* アスペクト比を維持 */
+    display: block; /* ブロック要素にして縦に並べ、余白を調整しやすくする */
+    margin: 20px auto; /* 画像を中央に配置し、上下に余白 */
+    border-radius: 8px; /* 画像の角を丸くする */
+}
+
+/* リストスタイル */
+ul, ol {
+    margin-left: 20px; /* 左側にインデント */
+    padding-left: 0; /* デフォルトのパディングを削除 */
+}
+
+ul li, ol li {
+    margin-bottom: 10px; /* 各リストアイテムの下に余白 */
+    font-size: 1.1em; /* リストの文字を少し大きく */
+}
+
+/* リンク/ボタンのスタイル */
+.button {
+    display: inline-block; /* インラインブロック要素にして横並びにしつつ幅やパディングを設定可能に */
+    background-color: #28a745; /* 緑色でボタンを目立たせる */
+    color: #ffffff; /* 白い文字でコントラストを出す */
+    padding: 12px 25px; /* ボタンのパディング */
+    text-decoration: none; /* 下線を削除 */
+    border-radius: 30px; /* 丸みを帯びたボタンにする */
+    margin: 10px 10px 10px 0; /* ボタン間の余白 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* ホバー時のアニメーション */
+    font-weight: bold; /* 文字を太く */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影をつけてボタンらしさを出す */
+}
+
+.button:hover {
+    background-color: #218838; /* ホバー時に少し濃い緑に */
+    transform: translateY(-2px); /* ホバー時に少し上に浮き上がる */
+}
+
+/* フッタースタイル */
+footer {
+    background-color: #333; /* 濃いグレーの背景 */
+    color: #ffffff; /* 白い文字 */
+    text-align: center; /* テキストを中央揃え */
+    padding: 20px; /* パディング */
+    margin-top: auto; /* フッターをページ下部に固定 */
+    border-top-left-radius: 15px; /* 上部の角を丸くする */
+    border-top-right-radius: 15px;
+    width: 100%; /* 幅いっぱいに広げる */
+    box-sizing: border-box;
+}
+
+/* レスポンシブデザイン - メディアクエリ */
+
+/* 画面幅が768px以下の場合（タブレットやスマホ向け） */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* タイトルを少し小さく */
+    }
+
+    header p {
+        font-size: 1em; /* サブタイトルを少し小さく */
+    }
+
+    section h2 {
+        font-size: 1.8em; /* セクションタイトルを少し小さく */
+    }
+
+    .button {
+        display: block; /* ボタンを縦に並べる */
+        width: calc(100% - 20px); /* 幅を調整 */
+        margin: 10px auto; /* ボタンを中央に配置 */
+        text-align: center;
+    }
+}
+
+/* 画面幅が480px以下の場合（スマホ向け） */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px; /* ヘッダーのパディングをさらに小さく */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* タイトルをさらに小さく */
+    }
+
+    section {
+        padding: 20px; /* セクションのパディングを小さく */
+    }
+
+    section h2 {
+        font-size: 1.5em; /* セクションタイトルをさらに小さく */
+    }
+
+    ul li, ol li {
+        font-size: 1em; /* リストの文字サイズを調整 */
+    }
+}
